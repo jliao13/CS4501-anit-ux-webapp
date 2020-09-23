@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title >Splash page!</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    {% load static %}
+    <style>
+        body{
+            background: url('{% static "project/images/samoyedBG.jpg" %}');
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+        }
+        html{
+            display: table;
+            margin:auto;
+            height: 100%;
+        }
+        button{
+            background-color: #4CAF50;
+        }
+    </style>
+
+    <body>
+        <div class="w3-container">
+            <h1 style="color: red; font-family: Brush Script MT, Brush Script Std, cursive; text-align:right; font-weight:900;">
+                DOG PERSONALITY TEST
+            </h1>
+            <div>
+                <p style="color:rgb(0, 38, 255); text-align:right; font-weight:900;">
+                    Welcome to the dog personality quiz! I welcome thee to exploring the world of dogs! 
+                    Let's first talk about dogs and how they affect personality! Dogs are very much said to 
+                    be like their owners so therefore, owners must be rather compatible with a particular type of
+                    dog, right? So in order for you figure out where to go, you should really just click <a href='/form/' style="">here</a> to get 
+                    to the next page.
+                </p>
+            </div>
+
+            <div class='col-xs-3' style="text-align:center;">
+                <button style='margin-right:25px' type="button" class="btn btn-success" onclick="location.href = 'https://www.youtube.com/watch?v=vLRyJ0dawjM&ab_channel=EDMBot'">Abrogate</button>
+                <button style='margin-right:25px' type="button" class="btn btn-success" onclick="location.href = '/form/'">Acquiesce</button>
+            </div>
+        </div>
+    </body>
+</html>
