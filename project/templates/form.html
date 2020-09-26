@@ -4,7 +4,7 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
-        <title>FormPage</title>
+        <title>FormPage!</title>
         <link rel="stylesheet" href="{% static "project/css/style.css" %}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -24,15 +24,20 @@
     <body>
         <div class="wrapper">
             <div class="sidebar">
-                <h2>Question Navigation</h2>
+                <h2>Qs</h2>
                 <ul>
-                    <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-                    <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
-                    <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
-                    <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
-                    <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-                    <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+                    <li class="Q1"><a href="#"><i class="fas fa-home"></i>Q1</a></li>
+                    <li class="Q2" hidden><a href="#"><i class="fas fa-user"></i>Q2</a></li>
+                    <li class="Q3" hidden><a href="#"><i class="fas fa-address-card"></i>Q3</a></li>
+                    <li class="Q4" hidden><a href="#"><i class="fas fa-project-diagram"></i>Q4</a></li>
+                    <li class="Q5" hidden><a href="#"><i class="fas fa-blog"></i>Q5</a></li>
+                    <li class="Q6" hidden><a href="#"><i class="fas fa-address-book"></i>Q6</a></li>
+                    <li class="Q7" hidden><a href="#"><i class="fas fa-map-pin"></i>Q7</a></li>
+                    <li class="Q8" hidden><a href="#"><i class="fas fa-map-pin"></i>Q9</a></li>
+                    <li class="Q9" hidden><a href="#"><i class="fas fa-map-pin"></i>Q9</a></li>
+                    <li class="Q10" hidden><a href="#"><i class="fas fa-map-pin"></i>Q10</a></li>
+                    <li class="Q11" hidden><a href="#"><i class="fas fa-map-pin"></i>Q11</a></li>
+                    <li class="..."><a href="#"><i class="fas fa-map-pin"></i>...?</a></li>
                 </ul> 
                 <div class="social_media">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -43,9 +48,29 @@
             <div class="main_content">
                 <div class="header">Fill out form to receive a dog personality!</div>  
                 <div class="info">
-                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-                  <!-- <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div> -->
+                <div class="Q1_text">
+                    <h2>Q1: What's your name?</h2>
+                    <form>
+                        <label>Name (first name followed by last name):</label>
+                        <input type="text" id="name">
+                    </form>
+                </div>
+                <div class="Q2_text">
+                    <h2>Q3: What's your favorite color?</h2>
+                    <form>
+                        <label>Favorite color (in hex #):</label>
+                        <input type="number" id="name">
+                    </form>
+                </div>
+                <div class="Q3_text"></div>
+                <div class="Q4_text"></div>
+                <div class="Q5_text"></div>
+                <div class="Q6_text"></div>
+                <div class="Q7_text"></div>
+                <div class="Q8_text"></div>
+                <div class="Q9_text"></div>
+                <div class="Q10_text"></div>
+                <div class="Q11_text"></div>
               </div>
             </div>
         </div>
