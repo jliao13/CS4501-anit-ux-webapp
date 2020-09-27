@@ -1,7 +1,34 @@
+<!-- templates/finish.html -->
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title >Finish Page!</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    {% load static %}
+    <style>
+        body{
+            background: url('{% static "project/images/samoyedBG.jpg" %}');
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+        }
+        html{
+            display: table;
+            margin:auto;
+            height: 100%;
+        }
+    </style>
 
-<body>
-    CONGRATS FINISHING!
-</body>
-
+    <body>
+        <div class="w3-container">
+            <h1 style="color: red; font-family: Brush Script MT, Brush Script Std, cursive; text-align:center; font-weight:900;">
+                CONGRATS ON FINISHING THE DOG PERSONALITY QUIZ! </br> 
+                Your dog personality breed is: </br>
+                the answer to the Question 11 on the previous page :P
+            </h1>
+        </div>
+    </body>
 </html>

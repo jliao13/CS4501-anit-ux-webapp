@@ -1,4 +1,4 @@
-<!-- templates/about.html -->
+<!-- templates/form.html -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@
                     <li id="Q5" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-blog"></i>Q5</a></li>
                     <li id="Q6" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-address-book"></i>Q6</a></li>
                     <li id="Q7" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q7</a></li>
-                    <li id="Q8" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q9</a></li>
+                    <li id="Q8" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q8</a></li>
                     <li id="Q9" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q9</a></li>
                     <li id="Q10" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q10</a></li>
                     <li id="Q11" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q11</a></li>
@@ -69,7 +69,7 @@
                     </form>
                     <button onclick="nextQuestion('Q1','Q2')">Submit</button>
                 </div>
-                <div class = "question" id="Q2_text" hidden>
+                <div class = "question" id="Q2_text" style="position: fixed; bottom:0; width: 100%" hidden>
                     <h2>Q2: What type of home/living space do you have?</h2>
                     <form>
                         <input type="radio" name="choice"> 
@@ -83,7 +83,7 @@
                     </form>
                     <button onclick="nextQuestion('Q2','Q3')">Submit</button>
                 </div>
-                <div class = "question" id="Q3_text" hidden>
+                <div class = "question" id="Q3_text" style="text-align: right;" hidden>
                     <h2>Q3: What's your favorite color?</h2>
                     <form>
                         <label>Favorite color (in hex #):</label>
@@ -107,7 +107,7 @@
                     </form>
                     <button onclick="nextQuestion('Q4','Q5')">Submit</button>
                 </div>
-                <div class = "question" id="Q5_text" hidden>
+                <div class = "question" id="Q5_text" style="text-align: right; position: fixed; bottom: 0;" hidden>
                     <h2>Q5: You're in a bad mood. What's got you down?</h2>
                     <form>
                         <input type="radio" name="choice"> 
@@ -134,7 +134,7 @@
                 <div class = "question" id="Q7_text" hidden>
                     <h2>Q7: Some of us are born for our roles. What's your dream career? (select as many as you like)</h2>
                     <form>
-                        <select multiple>
+                        <select multiple style="width: 100%;">
                             <option value="choice">Police. Bringing justice to the world!</option>
                             <option value="choice">Military. To defend the homeland!</option>
                             <option value="choice">Political activist. Move forward!</option>
@@ -145,7 +145,7 @@
                     </form>
                     <button onclick="nextQuestion('Q7','Q8')">Submit</button>
                 </div>
-                <div class = "question" id="Q8_text" hidden>
+                <div class = "question" id="Q8_text" style="width:800px; margin:0 auto;" hidden>
                     <h2>Q8: It's important to stay in shape! Which activity sounds like the most fun?</h2>
                     <form>
                         <input type="radio" name="choice"> 
@@ -175,7 +175,7 @@
                     </form>
                     <button onclick="nextQuestion('Q9','Q10')">Submit</button>
                 </div>
-                <div class = "question" id="Q10_text" hidden>
+                <div class = "question" id="Q10_text" style="text-align: right; position: fixed; bottom: 0; right:0;" hidden>
                     <h2>Q10: How important is snuggling to you?</h2>
                     <form>
                         <input type="radio" name="choice"> 
