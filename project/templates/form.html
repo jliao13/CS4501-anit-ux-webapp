@@ -24,20 +24,33 @@
     <body>
         <div class="wrapper">
             <div class="sidebar">
-                <h2>Qs</h2>
-                <ul>
-                    <li class="Q1"><a href="#"><i class="fas fa-home"></i>Q1</a></li>
-                    <li class="Q2" hidden><a href="#"><i class="fas fa-user"></i>Q2</a></li>
-                    <li class="Q3" hidden><a href="#"><i class="fas fa-address-card"></i>Q3</a></li>
-                    <li class="Q4" hidden><a href="#"><i class="fas fa-project-diagram"></i>Q4</a></li>
-                    <li class="Q5" hidden><a href="#"><i class="fas fa-blog"></i>Q5</a></li>
-                    <li class="Q6" hidden><a href="#"><i class="fas fa-address-book"></i>Q6</a></li>
-                    <li class="Q7" hidden><a href="#"><i class="fas fa-map-pin"></i>Q7</a></li>
-                    <li class="Q8" hidden><a href="#"><i class="fas fa-map-pin"></i>Q9</a></li>
-                    <li class="Q9" hidden><a href="#"><i class="fas fa-map-pin"></i>Q9</a></li>
-                    <li class="Q10" hidden><a href="#"><i class="fas fa-map-pin"></i>Q10</a></li>
-                    <li class="Q11" hidden><a href="#"><i class="fas fa-map-pin"></i>Q11</a></li>
-                    <li class="..."><a href="#"><i class="fas fa-map-pin"></i>...?</a></li>
+                <h2>Q#</h2>
+                <ul class="nav">
+                    <li id="Q1"><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-home"></i>Q1</a></li>
+                    <li id="Q2" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-user"></i>Q2</a></li>
+                    <li id="Q3" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-address-card"></i>Q3</a></li>
+                    <li id="Q4" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-project-diagram"></i>Q4</a></li>
+                    <li id="Q5" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-blog"></i>Q5</a></li>
+                    <li id="Q6" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-address-book"></i>Q6</a></li>
+                    <li id="Q7" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q7</a></li>
+                    <li id="Q8" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q9</a></li>
+                    <li id="Q9" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q9</a></li>
+                    <li id="Q10" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q10</a></li>
+                    <li id="Q11" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q11</a></li>
+                    <li id="..."><a href="#"><i class="fas fa-map-pin"></i>...?</a>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Take Me Home</a>
+                                <ul>
+                                    <li><a href="#">Go back one page</a></li>
+                                    <li><a href="#">Go to previous page</a></li>
+                                    <li><a href='/'>See Instructions</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">What's going on?</a></li>
+                            <li><a href="#">Instructions?</a></li>
+                        </ul>
+                    </li>
                 </ul> 
                 <div class="social_media">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -48,36 +61,174 @@
             <div class="main_content">
                 <div class="header">Fill out form to receive a dog personality!</div>  
                 <div class="info">
-                <div class="Q1_text">
+                <div class = "question" id="Q1_text">
                     <h2>Q1: What's your name?</h2>
                     <form>
                         <label>Name (first name followed by last name):</label>
                         <input type="text" id="name">
                     </form>
+                    <button onclick="nextQuestion('Q1','Q2')">Submit</button>
                 </div>
-                <div class="Q2_text">
+                <div class = "question" id="Q2_text" hidden>
+                    <h2>Q2: What type of home/living space do you have?</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">It's bigger than a clost, so I call it an apartment</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">"Cozy" Home</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">Large House</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">Don't have one</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q2','Q3')">Submit</button>
+                </div>
+                <div class = "question" id="Q3_text" hidden>
                     <h2>Q3: What's your favorite color?</h2>
                     <form>
                         <label>Favorite color (in hex #):</label>
-                        <input type="number" id="name">
+                        <input type="number" id="color_hex">
                     </form>
+                    <button onclick="nextQuestion('Q3','Q4')">Submit</button>
                 </div>
-                <div class="Q3_text"></div>
-                <div class="Q4_text"></div>
-                <div class="Q5_text"></div>
-                <div class="Q6_text"></div>
-                <div class="Q7_text"></div>
-                <div class="Q8_text"></div>
-                <div class="Q9_text"></div>
-                <div class="Q10_text"></div>
-                <div class="Q11_text"></div>
+                <div class = "question" id="Q4_text" hidden>
+                    <h2>Q4: You're out with friends and a stranger approaches
+                        to say hello. How do you greet them?
+                    </h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">With a big hug! It's nice to meet new people.</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Tell them to go away, and then huddle with my crew</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">With lots of questions. I keep my guard up until I trust them</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">Stay friendly but not overbearing. I'm cool meeting others</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q4','Q5')">Submit</button>
+                </div>
+                <div class = "question" id="Q5_text" hidden>
+                    <h2>Q5: You're in a bad mood. What's got you down?</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Boredom. I constantly have to be busy</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Creepy, intimidating strangers</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">My friends being too busy for fun</label><br>
+                        <input type="radio" name="choice">
+                        <label for="choice">Loved ones having problems I can't solve</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q5','Q6')">Submit</button>
+                </div>
+                <div class = "question" id="Q6_text" hidden>
+                    <h2>Q6: We are creatures of our environments! Choose your natural habitat:</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">city</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">country</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q6','Q7')">Submit</button>
+                </div>
+                <div class = "question" id="Q7_text" hidden>
+                    <h2>Q7: Some of us are born for our roles. What's your dream career? (select as many as you like)</h2>
+                    <form>
+                        <select multiple>
+                            <option value="choice">Police. Bringing justice to the world!</option>
+                            <option value="choice">Military. To defend the homeland!</option>
+                            <option value="choice">Political activist. Move forward!</option>
+                            <option value="choice">Graphic designer. The world is my canvass.</option>
+                            <option value="choice">Lifeguard. The beach is mine.</option>
+                            <option value="choice">Firefighter. Got to save the day!</option>
+                        </select>
+                    </form>
+                    <button onclick="nextQuestion('Q7','Q8')">Submit</button>
+                </div>
+                <div class = "question" id="Q8_text" hidden>
+                    <h2>Q8: It's important to stay in shape! Which activity sounds like the most fun?</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Frisbee</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Skiing</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Crossfit</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Swimming</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q8','Q9')">Submit</button>
+                </div>
+                <div class = "question" id="Q9_text" hidden>
+                    <h2>Q9: Your main goal in life is to have a...</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Strong career</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Loving family</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Fulfilling and fun time on Earth</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Fulfilling and fun time on Earth</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">Chic sense of style</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q9','Q10')">Submit</button>
+                </div>
+                <div class = "question" id="Q10_text" hidden>
+                    <h2>Q10: How important is snuggling to you?</h2>
+                    <form>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">seriously important</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">no clinging, please</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">important</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">very important</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">occasional snuggling welcome</label><br>
+                    </form>
+                    <button onclick="nextQuestion('Q10','Q11')">Submit</button>
+                </div>
+                <div class = "question" id="Q11_text" >
+                    <h2>Q11: Which of the following breeds do you like?</h2>
+                    <form id="breed">
+                        <input type="radio" name="choice"> 
+                        <label for="choice">golden retriever</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">german shepard</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">city</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">poodle</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">beagle</label><br>
+                        <input type="radio" name="choice"> 
+                        <label for="choice">siberian husky</label><br>
+                    </form>
+                    <button onclick="nextPage('animal')"> <a href="/finish/">Submit</a></button>
+                </div>
               </div>
             </div>
         </div>
     </body>
 
     <script>
-        
+        function nextQuestion(prevNum, qNum){
+            // document.getElementById(prevNum).setAttribute("hidden", true);
+            document.getElementById(prevNum+"_text").setAttribute("hidden", true);
+            document.getElementById(qNum).removeAttribute("hidden");
+            document.getElementById(qNum+"_text").removeAttribute("hidden");
+        }
+
+        function nextPage(breed){
+            console.log(document.getElementById("breed"));
+        }
+
+        function makeDialogBoxes(){
+            window.alert("Want to revisit this question answer? Not an option :) ");
+        }
     </script>
 
 </html>

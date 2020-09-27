@@ -9,3 +9,6 @@ class HomePageView(TemplateView):
 # Add this view
 class FormPageView(TemplateView):
     template_name = "form.html"
+
+class FinishPageView(TemplateView):
+    template_name = "finish.html"
