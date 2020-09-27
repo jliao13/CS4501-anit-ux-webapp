@@ -12,3 +12,6 @@ class FormPageView(TemplateView):
 
 class FinishPageView(TemplateView):
     template_name = "finish.html"
+
+class FinishRealPageView(TemplateView):
+    template_name = "finishreal.html"

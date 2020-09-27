@@ -168,7 +168,15 @@ body{
 .nav > li > ul > li:hover > ul {
   left: auto;
   margin-top: 5px;
-  margin-left: 145px;
+  margin-left: 130px;
   background-color: blue;
   min-width: 100%;
+}
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
 }

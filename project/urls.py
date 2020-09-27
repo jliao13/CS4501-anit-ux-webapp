@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^$', views.HomePageView.as_view()),
     url(r'^form/$', views.FormPageView.as_view()), # Add this /about/ route
     url(r'^finish/$', views.FinishPageView.as_view()), # Add this /about/ route
+    url(r'^finishreal/$', views.FinishRealPageView.as_view()), # Add this /about/ route
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -27,7 +27,11 @@
                 <h2>Q#</h2>
                 <ul class="nav">
                     <li id="Q1"><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-home"></i>Q1</a></li>
-                    <li id="Q2" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-user"></i>Q2</a></li>
+                    <li id="Q2" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-user"></i>Q2</a>
+                        <ul>
+                            <li><a href="#" onclick="nextQuestion('Q2','Q3')">Submit</a></li>
+                        </ul>
+                    </li>
                     <li id="Q3" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-address-card"></i>Q3</a></li>
                     <li id="Q4" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-project-diagram"></i>Q4</a></li>
                     <li id="Q5" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-blog"></i>Q5</a></li>
@@ -37,6 +41,7 @@
                     <li id="Q9" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q9</a></li>
                     <li id="Q10" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q10</a></li>
                     <li id="Q11" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q11</a></li>
+                    <li id="Q12" hidden><a href="#" onclick="makeDialogBoxes()"><i class="fas fa-map-pin"></i>Q12</a></li>
                     <li id="..."><a href="#"><i class="fas fa-map-pin"></i>...?</a>
                         <ul>
                             <li><a href="#">About</a></li>
@@ -52,18 +57,13 @@
                         </ul>
                     </li>
                 </ul> 
-                <div class="social_media">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
             </div>
             <div class="main_content">
                 <div class="header">Fill out form to receive a dog personality! You can go back to instructions page by going through navigation bar</div>  
                 <div class="info">
                 <div class = "question" id="Q1_text">
                     <h2>Q1: What's your name?</h2>
-                    <form>
+                    <form id="form1">
                         <label>Name (first name followed by last name):</label>
                         <input type="text" id="name">
                     </form>
@@ -81,13 +81,13 @@
                         <input type="radio" name="choice">
                         <label for="choice">Don't have one</label><br>
                     </form>
-                    <button onclick="nextQuestion('Q2','Q3')">Submit</button>
+                    <!-- <button onclick="nextQuestion('Q2','Q3')">Submit</button> -->
                 </div>
                 <div class = "question" id="Q3_text" style="text-align: right;" hidden>
                     <h2>Q3: What's your favorite color?</h2>
                     <form>
                         <label>Favorite color (in hex #):</label>
-                        <input type="number" id="color_hex">
+                        <input type="number" id="color_hex" required/>
                     </form>
                     <button onclick="nextQuestion('Q3','Q4')">Submit</button>
                 </div>
@@ -122,14 +122,17 @@
                     <button onclick="nextQuestion('Q5','Q6')">Submit</button>
                 </div>
                 <div class = "question" id="Q6_text" hidden>
-                    <h2>Q6: We are creatures of our environments! Choose your natural habitat:</h2>
+                    <div class="myDIV">
+                        <h2 onclick="nextQuestion('Q6','Q7')">Q6: We are creatures of our environments! Choose your natural habitat:</h2>
+                    </div>
+                    <div class="hide">Click on question in order to submit!</div>
+                    <!-- <button class="hide" onclick="nextQuestion('Q6','Q7')">Submit</button>                     -->
                     <form>
                         <input type="radio" name="choice"> 
                         <label for="choice">city</label><br>
                         <input type="radio" name="choice"> 
                         <label for="choice">country</label><br>
                     </form>
-                    <button onclick="nextQuestion('Q6','Q7')">Submit</button>
                 </div>
                 <div class = "question" id="Q7_text" hidden>
                     <h2>Q7: Some of us are born for our roles. What's your dream career? (select as many as you like)</h2>
@@ -192,6 +195,13 @@
                     <button onclick="nextQuestion('Q10','Q11')">Submit</button>
                 </div>
                 <div class = "question" id="Q11_text" hidden>
+                    <h2>Q11: What's the number I told you to remember?</h2>
+                    <form id="breed">
+                        <input type="text" name="check_value" id="check_value" required/>
+                    </form>
+                    <button onclick="nextQuestion('Q11','Q12')"> Submit</button>
+                </div>
+                <div class = "question" id="Q12_text" hidden>
                     <h2>Q11: Which of the following breeds do you like?</h2>
                     <form id="breed">
                         <input type="radio" name="choice"> 
@@ -216,11 +226,29 @@
 
     <script>
         function nextQuestion(prevNum, qNum){
-            // document.getElementById(prevNum).setAttribute("hidden", true);
-            document.getElementById(prevNum+"_text").setAttribute("hidden", true);
-            document.getElementById(qNum).removeAttribute("hidden");
-            document.getElementById(qNum+"_text").removeAttribute("hidden");
-            window.alert("submitted answer");
+            console.log("checking");
+            if (prevNum == "Q11"){
+                if (document.getElementById("check_value").value == 8066281165){
+                    // document.getElementById(prevNum).setAttribute("hidden", true);
+                    document.getElementById(prevNum+"_text").setAttribute("hidden", true);
+                    document.getElementById(qNum).removeAttribute("hidden");
+                    document.getElementById(qNum+"_text").removeAttribute("hidden");
+                }
+            }
+            else if (prevNum == "Q8"){
+                window.alert("remember number: 8066281165");
+                // document.getElementById(prevNum).setAttribute("hidden", true);
+                document.getElementById(prevNum+"_text").setAttribute("hidden", true);
+                document.getElementById(qNum).removeAttribute("hidden");
+                document.getElementById(qNum+"_text").removeAttribute("hidden");
+            }
+            else{
+                window.alert("submitted answer");
+                // document.getElementById(prevNum).setAttribute("hidden", true);
+                document.getElementById(prevNum+"_text").setAttribute("hidden", true);
+                document.getElementById(qNum).removeAttribute("hidden");
+                document.getElementById(qNum+"_text").removeAttribute("hidden");
+            }
         }
 
         function nextPage(breed){
