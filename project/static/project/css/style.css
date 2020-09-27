@@ -30,8 +30,8 @@ body{
 .main_content .question {
   position:relative;
   background-color: aquamarine;
-  /* animation: shake 0.5s;
-  animation-iteration-count: infinite; */
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .wrapper{
