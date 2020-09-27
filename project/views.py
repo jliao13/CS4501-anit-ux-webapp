@@ -15,3 +15,6 @@ class FinishPageView(TemplateView):
 
 class FinishRealPageView(TemplateView):
     template_name = "finishreal.html"
+
+class IndexCopyPageView(TemplateView):
+    template_name = "index_copy.html"
