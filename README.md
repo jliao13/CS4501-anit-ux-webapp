@@ -23,3 +23,8 @@ Edit static files make sure to run the following to update:
 ```
 python manage.py collectstatic
 ```
+
+Run local django:
+```
+python manage.py runserver
+```
