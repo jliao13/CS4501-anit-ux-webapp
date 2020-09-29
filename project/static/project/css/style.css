@@ -29,7 +29,7 @@ body{
 
 .main_content .question {
   position:relative;
-  background-color: blue;
+  background-color: aqua;
   opacity: 0.5;
   animation: shake 5s;
   animation-iteration-count: infinite;
