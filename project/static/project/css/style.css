@@ -29,8 +29,9 @@ body{
 
 .main_content .question {
   position:relative;
-  background-color: aquamarine;
-  animation: shake 0.5s;
+  background-color: blue;
+  opacity: 0.5;
+  animation: shake 5s;
   animation-iteration-count: infinite;
 }
 
