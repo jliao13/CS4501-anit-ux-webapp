@@ -83,7 +83,7 @@
                     <h2>Q3: What's your favorite color?</h2>
                     <form>
                         <label>Favorite color (in hex #):</label>
-                        <input type="number" id="Q3_answer" required/>
+                        <input type="string" id="Q3_answer" required/>
                     </form>
                     <button onclick="validateForm('Q3','Q4')">Submit</button>
                 </div>
@@ -241,7 +241,7 @@
 
             if (prevNum == 'Q3'){
                 console.log(document.getElementById(prevNum+"_answer").value);
-                if (document.getElementById(prevNum+"_answer").value.length == 4){;
+                if (document.getElementById(prevNum+"_answer").value.length == 6){;
                     nextQuestion('Q3','Q4');
                 }
             }
